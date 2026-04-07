@@ -1,0 +1,59 @@
+{
+	"name": "untill",
+	"properties": {
+		"activities": [
+			{
+				"name": "Until1",
+				"type": "Until",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"expression": {
+						"value": "@equals(pipeline().parameters.p1,pipeline().parameters.p2)",
+						"type": "Expression"
+					},
+					"activities": [
+						{
+							"name": "Set variable1",
+							"type": "SetVariable",
+							"dependsOn": [],
+							"policy": {
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"variableName": "v1",
+								"value": "rajesh"
+							}
+						}
+					],
+					"timeout": "0.12:00:00"
+				}
+			}
+		],
+		"parameters": {
+			"p1": {
+				"type": "string",
+				"defaultValue": "rajesh"
+			},
+			"p2": {
+				"type": "string",
+				"defaultValue": "kambhalla"
+			}
+		},
+		"variables": {
+			"v1": {
+				"type": "String",
+				"defaultValue": "rajesh"
+			},
+			"v2": {
+				"type": "String",
+				"defaultValue": "kambhalla"
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2026-04-07T08:18:24Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
