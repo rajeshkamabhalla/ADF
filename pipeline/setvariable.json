@@ -1,0 +1,65 @@
+{
+	"name": "setvariable",
+	"properties": {
+		"description": "normal set variable ",
+		"activities": [
+			{
+				"name": "Set variable1",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "v1",
+					"value": "rajeshkambhalla"
+				}
+			},
+			{
+				"name": "Set variable2",
+				"type": "SetVariable",
+				"dependsOn": [
+					{
+						"activity": "Set variable1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "v2",
+					"value": {
+						"value": "@pipeline().parameters.p1",
+						"type": "Expression"
+					}
+				}
+			}
+		],
+		"parameters": {
+			"p1": {
+				"type": "int",
+				"defaultValue": 22
+			}
+		},
+		"variables": {
+			"v1": {
+				"type": "String",
+				"defaultValue": "rajesh"
+			},
+			"v2": {
+				"type": "Integer",
+				"defaultValue": 10
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2026-04-06T12:51:53Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
