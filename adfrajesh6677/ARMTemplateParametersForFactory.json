@@ -1,0 +1,39 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adfrajesh6677"
+		},
+		"AzureSqllinked server_password": {
+			"value": ""
+		},
+		"gen2linked server_accountKey": {
+			"value": ""
+		},
+		"azuresqldatasets_password": {
+			"value": ""
+		},
+		"AzureSqllinked server_properties_typeProperties_server": {
+			"value": "batch03sqlserver.database.windows.net"
+		},
+		"AzureSqllinked server_properties_typeProperties_database": {
+			"value": "free-sql-db-2443724"
+		},
+		"AzureSqllinked server_properties_typeProperties_userName": {
+			"value": "rajesh"
+		},
+		"gen2linked server_properties_typeProperties_url": {
+			"value": "https://storagebatch03rajesh.dfs.core.windows.net/"
+		},
+		"azuresqldatasets_properties_typeProperties_server": {
+			"value": "batch03sqlserver.database.windows.net"
+		},
+		"azuresqldatasets_properties_typeProperties_database": {
+			"value": "free-sql-db-2443724"
+		},
+		"azuresqldatasets_properties_typeProperties_userName": {
+			"value": "rajesh"
+		}
+	}
+}
