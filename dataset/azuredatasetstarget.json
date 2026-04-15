@@ -1,0 +1,16 @@
+{
+	"name": "azuredatasetstarget",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "azuresqldatasets",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "batch03",
+			"table": "data"
+		}
+	}
+}
