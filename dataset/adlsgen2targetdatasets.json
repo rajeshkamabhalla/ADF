@@ -5,13 +5,22 @@
 			"referenceName": "gen2linked server",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"sc": {
+				"type": "string",
+				"defaultValue": "dbo"
+			},
+			"tb": {
+				"type": "string",
+				"defaultValue": "emp"
+			}
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "RAJESH KAMBHALLA_fabric.pdf",
-				"folderPath": "inputdata",
+				"folderPath": "outputdata",
 				"fileSystem": "inputcontainer"
 			},
 			"columnDelimiter": ",",

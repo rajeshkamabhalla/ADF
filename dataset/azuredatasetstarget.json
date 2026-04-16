@@ -5,12 +5,28 @@
 			"referenceName": "azuresqldatasets",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"sc": {
+				"type": "string",
+				"defaultValue": "batch03"
+			},
+			"tb": {
+				"type": "string",
+				"defaultValue": "emp"
+			}
+		},
 		"annotations": [],
 		"type": "AzureSqlTable",
 		"schema": [],
 		"typeProperties": {
-			"schema": "batch03",
-			"table": "data"
+			"schema": {
+				"value": "@dataset().sc",
+				"type": "Expression"
+			},
+			"table": {
+				"value": "@dataset().tb",
+				"type": "Expression"
+			}
 		}
 	}
 }
