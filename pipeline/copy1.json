@@ -201,12 +201,6 @@
 				]
 			}
 		],
-		"parameters": {
-			"file": {
-				"type": "array",
-				"defaultValue": "[\"emp\",\"Employee\""
-			}
-		},
 		"annotations": []
 	}
 }
