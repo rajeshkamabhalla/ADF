@@ -8,10 +8,10 @@
 		"AzureSqllinked server_password": {
 			"value": ""
 		},
-		"gen2linked server_accountKey": {
+		"azuresqldatasets_password": {
 			"value": ""
 		},
-		"azuresqldatasets_password": {
+		"gen2linked server_accountKey": {
 			"value": ""
 		},
 		"AzureSqllinked server_properties_typeProperties_server": {
@@ -23,9 +23,6 @@
 		"AzureSqllinked server_properties_typeProperties_userName": {
 			"value": "rajesh"
 		},
-		"gen2linked server_properties_typeProperties_url": {
-			"value": "https://storagebatch03rajesh.dfs.core.windows.net/"
-		},
 		"azuresqldatasets_properties_typeProperties_server": {
 			"value": "batch03sqlserver.database.windows.net"
 		},
@@ -34,6 +31,9 @@
 		},
 		"azuresqldatasets_properties_typeProperties_userName": {
 			"value": "rajesh"
+		},
+		"gen2linked server_properties_typeProperties_url": {
+			"value": "https://storagebatch03rajesh.dfs.core.windows.net/"
 		}
 	}
 }
