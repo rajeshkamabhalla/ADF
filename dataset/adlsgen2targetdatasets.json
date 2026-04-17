@@ -5,22 +5,13 @@
 			"referenceName": "gen2linked server",
 			"type": "LinkedServiceReference"
 		},
-		"parameters": {
-			"sc": {
-				"type": "string",
-				"defaultValue": "dbo"
-			},
-			"tb": {
-				"type": "string",
-				"defaultValue": "emp"
-			}
-		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"folderPath": "outputdata",
+				"fileName": "Devendra_Resume.csv",
+				"folderPath": "inputdata",
 				"fileSystem": "inputcontainer"
 			},
 			"columnDelimiter": ",",
