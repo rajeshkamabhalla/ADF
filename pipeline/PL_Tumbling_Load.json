@@ -1,0 +1,17 @@
+{
+	"name": "PL_Tumbling_Load",
+	"properties": {
+		"activities": [
+			{
+				"name": "Wait1",
+				"type": "Wait",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"waitTimeInSeconds": 300
+				}
+			}
+		],
+		"annotations": []
+	}
+}
