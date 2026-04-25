@@ -844,40 +844,21 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/AzureSqlTable1')]",
+			"name": "[concat(parameters('factoryName'), '/AzureSqlDatabaseDataSource')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
+				"description": "Connection to your source data store.",
 				"linkedServiceName": {
 					"referenceName": "AzureSqllinked server",
 					"type": "LinkedServiceReference"
 				},
 				"annotations": [],
 				"type": "AzureSqlTable",
-				"schema": [
-					{
-						"name": "EmpId",
-						"type": "int",
-						"precision": 10
-					},
-					{
-						"name": "Name",
-						"type": "varchar"
-					},
-					{
-						"name": "DeptId",
-						"type": "int",
-						"precision": 10
-					},
-					{
-						"name": "Salary",
-						"type": "int",
-						"precision": 10
-					}
-				],
+				"schema": [],
 				"typeProperties": {
 					"schema": "batch03",
-					"table": "Employees"
+					"table": "PersonDetails"
 				}
 			},
 			"dependsOn": [
@@ -885,61 +866,47 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/DelimitedText1')]",
+			"name": "[concat(parameters('factoryName'), '/AzureSqlDatabaseDataSource1')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
+				"description": "Connection to your source data store.",
 				"linkedServiceName": {
-					"referenceName": "gen2linked server",
+					"referenceName": "AzureSqllinked server",
 					"type": "LinkedServiceReference"
 				},
 				"annotations": [],
-				"type": "DelimitedText",
+				"type": "AzureSqlTable",
+				"schema": [],
 				"typeProperties": {
-					"location": {
-						"type": "AzureBlobFSLocation",
-						"fileName": "Aug_SalarySlip.pdf",
-						"folderPath": "inputdata",
-						"fileSystem": "inputcontainer"
-					},
-					"columnDelimiter": ",",
-					"escapeChar": "\\",
-					"firstRowAsHeader": true,
-					"quoteChar": "\""
-				},
-				"schema": []
+					"schema": "batch03",
+					"table": "PersonDetails"
+				}
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/gen2linked server')]"
+				"[concat(variables('factoryId'), '/linkedServices/AzureSqllinked server')]"
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/adlsgen2targetdatasets')]",
+			"name": "[concat(parameters('factoryName'), '/AzureSqlDatabaseDataSource2')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
+				"description": "Connection to your source data store.",
 				"linkedServiceName": {
-					"referenceName": "gen2linked server",
+					"referenceName": "AzureSqllinked server",
 					"type": "LinkedServiceReference"
 				},
 				"annotations": [],
-				"type": "DelimitedText",
+				"type": "AzureSqlTable",
+				"schema": [],
 				"typeProperties": {
-					"location": {
-						"type": "AzureBlobFSLocation",
-						"fileName": "Devendra_Resume.csv",
-						"folderPath": "inputdata",
-						"fileSystem": "inputcontainer"
-					},
-					"columnDelimiter": ",",
-					"escapeChar": "\\",
-					"firstRowAsHeader": true,
-					"quoteChar": "\""
-				},
-				"schema": []
+					"schema": "batch03",
+					"table": "PersonDetails"
+				}
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/gen2linked server')]"
+				"[concat(variables('factoryId'), '/linkedServices/AzureSqllinked server')]"
 			]
 		}
 	]
